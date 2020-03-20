@@ -7,7 +7,16 @@ The API supports to one time call and repeated calls which will directed to call
 
 ## Installation
 
-<code> cordova plugin add https://github.com/okhiroyuki/cordova-plugin-ambient-light.git</code>
+```
+cordova plugin add @red-mobile/cordova-plugin-ambient-light
+```
+
+### Uninstall
+
+```
+cordova plugin remove cordova-plugin-ambient-light
+npm unisntall @red-mobile/cordova-plugin-ambient-light
+```
 
 ## Supported Platforms
 
