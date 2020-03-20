@@ -26,13 +26,13 @@ function start() {
         for (var i = 0, l = tempListeners.length; i < l; i++) {
             tempListeners[i].fail(e);
         }
-    }, "AmbientLightSensor", "start", []);
+    }, "AmbientLight", "start", []);
     running = true;
 }
 
 // Tells native to stop.
 function stop() {
-    exec(null, null, "AmbientLightSensor", "stop", []);
+    exec(null, null, "AmbientLight", "stop", []);
     light = null;
     running = false;
 }

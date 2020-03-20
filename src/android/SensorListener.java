@@ -1,5 +1,7 @@
 package org.apache.cordova.ambientlight; 
 
+import java.util.List;
+
 import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
@@ -26,7 +28,7 @@ public class SensorListener extends CordovaPlugin implements SensorEventListener
     public static int ERROR_FAILED_TO_START = 3;
 
     private float intensity;		//intensity value
-	private long timeStamp;			//time of most recent value
+	private long timestamp;			//time of most recent value
 	private int status;				//running status listner
 	private int accuracy = SensorManager.SENSOR_STATUS_ACCURACY_MEDIUM;
 
@@ -44,7 +46,7 @@ public class SensorListener extends CordovaPlugin implements SensorEventListener
 
     public SensorListener(){
     	this.intensity= 0;
-    	this.timeStamp = 0;
+    	this.timestamp = 0;
     	this.setStatus(SensorListener.STOPPED);
     }
 
@@ -67,6 +69,11 @@ public class SensorListener extends CordovaPlugin implements SensorEventListener
 		}else{
 			return false;
 		}
+		
+		PluginResult result = new PluginResult(PluginResult.Status.NO_RESULT, "");
+        result.setKeepCallback(true);
+        callbackContext.sendPluginResult(result);
+		return true;
 	}
 
 	public void onDestroy(){
@@ -144,7 +151,7 @@ public class SensorListener extends CordovaPlugin implements SensorEventListener
 	private void timeout() {
 		if (this.status == SensorListener.STARTING && 
 			this.accuracy >= SensorManager.SENSOR_STATUS_ACCURACY_MEDIUM) {				
-				this.timeStamp = System.currentTimeMillis();
+				this.timestamp = System.currentTimeMillis();
 				this.win();
         }
 	}
@@ -185,7 +192,7 @@ public class SensorListener extends CordovaPlugin implements SensorEventListener
 		this.setStatus(SensorListener.RUNNING);
 
 		if (this.accuracy >= SensorManager.SENSOR_STATUS_ACCURACY_MEDIUM){
-			this.timeStamp = System.currentTimeMillis();
+			this.timestamp = System.currentTimeMillis();
 			this.intensity = event.values[0];
 			
 			this.win();

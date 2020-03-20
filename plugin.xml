@@ -24,6 +24,6 @@
                 <param name="android-package" value="org.apache.cordova.ambientlight.SensorListener"/>
             </feature>
         </config-file>
-         <source-file src="src/android/SensorListener.java" target-dir="src/org/apache/cordova/ambientlight" />
+        <source-file src="src/android/SensorListener.java" target-dir="src/org/apache/cordova/ambientlight" />
 	</platform>
 </plugin>
