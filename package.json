@@ -1,0 +1,29 @@
+{
+  "name": "cordova-plugin-ambient-light",
+  "version": "0.0.1",
+  "description": "Cordova Ambient Light Sensor Plugin",
+  "cordova": {
+    "id": "cordova-plugin-ambient-light",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okhiroyuki/cordova-plugin-ambient-light.git"
+  },
+  "scripts": {
+    "test": "npm run jshint",
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src"
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Hiroyuki Okada",
+  "license": "MIT",
+  "devDependencies": {
+    "jshint": "^2.11.0"
+  }
+}

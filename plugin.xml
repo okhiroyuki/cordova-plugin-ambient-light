@@ -1,0 +1,29 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-ambient-light"
+    version="0.0.1">
+    
+    <name>Ambient Light</name>
+    <description>This plugin allows you to get data from existing Ambient Light Sensor in the device</description>
+    <license>MIT</license>
+    <keywords>cordova,light</keywords>
+    <repo>https://github.com/okhiroyuki/cordova-plugin-ambient-light.git</repo>
+    <author>Hiroyuki Okada</author>
+   
+    <js-module src="www/LightSensor.js" name="LightSensor">
+        <clobbers target="LightSensor" />
+    </js-module>
+
+    <js-module src="www/ambientlight.js" name="ambientlight">
+        <clobbers target="navigator.ambientlight" />
+    </js-module>
+
+	<!-- andorid -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AmbientLight">
+                <param name="android-package" value="org.apache.cordova.ambientlight.SensorListener"/>
+            </feature>
+        </config-file>
+         <source-file src="src/android/SensorListener.java" target-dir="src/org/apache/cordova/ambientlight" />
+	</platform>
+</plugin>
