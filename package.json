@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-ambient-light",
+  "name": "@red-mobile/cordova-plugin-ambient-light",
   "version": "0.0.1",
   "description": "Cordova Ambient Light Sensor Plugin",
   "cordova": {
-    "id": "cordova-plugin-ambient-light",
+    "id": "@red-mobile/cordova-plugin-ambient-light",
     "platforms": [
       "android"
     ]
