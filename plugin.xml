@@ -1,6 +1,6 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="cordova-plugin-ambient-light"
-    version="0.0.1">
+    id="@red-mobile/cordova-plugin-ambient-light"
+    version="1.0.0">
     
     <name>Ambient Light</name>
     <description>This plugin allows you to get data from existing Ambient Light Sensor in the device</description>
@@ -8,6 +8,10 @@
     <keywords>cordova,light</keywords>
     <repo>https://github.com/okhiroyuki/cordova-plugin-ambient-light.git</repo>
     <author>Hiroyuki Okada</author>
+    <engines>
+        <engine name="cordova" version=">=10.0.0"/>
+     </engines>
+
    
     <js-module src="www/LightSensor.js" name="LightSensor">
         <clobbers target="LightSensor" />

@@ -14,8 +14,7 @@ cordova plugin add @red-mobile/cordova-plugin-ambient-light
 ### Uninstall
 
 ```
-cordova plugin remove cordova-plugin-ambient-light
-npm unisntall @red-mobile/cordova-plugin-ambient-light
+cordova plugin remove @red-mobile/cordova-plugin-ambient-light
 ```
 
 ## Supported Platforms
