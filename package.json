@@ -24,6 +24,6 @@
   "author": "Hiroyuki Okada",
   "license": "MIT",
   "devDependencies": {
-    "jshint": "^2.11.0"
+    "jshint": "2.13.6"
   }
 }
